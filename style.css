@@ -16,7 +16,14 @@
   font-display: swap;
 }
 
-
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-ms-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+}
 
 html, body {margin:0;padding:0; font-family:Toroka Wide;overscroll-behavior-y: none;}
 body { background:black;}
@@ -47,6 +54,26 @@ width:100%;
     transform: translate(calc(50vw - 50%)) scale(1);
   }
 } */
+
+.laurels {
+  position: absolute;
+  padding-top:8vh;
+  padding-left:4vh;
+  padding-right:4vh;
+  display: flex;
+  width:100%;
+justify-content: space-between;
+  flex-direction: row;
+}
+.laurels .left, .laurels .right {
+  display:flex;
+  gap: 2vw;
+  /* max-width: 700px; */
+}
+.laurels img {
+  filter: invert(1);
+  height: 7vh;
+}
 
 #top-anim {
 width:100vw;
@@ -113,7 +140,7 @@ bottom: -55vh;
   left: 0;
   width: 100%;
   height: 50%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 10%)); /* Gradient from transparent to black */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 20%)); /* Gradient from transparent to black */
   pointer-events: none; /* Allow interactions to pass through */
   mix-blend-mode: multiply; /* Apply multiply blend mode */
 }
@@ -212,7 +239,7 @@ margin:0 auto;
 }
 
 #synopsis {
-  max-width:40ch;
+  max-width:47ch;
   padding:0 5%;
   font-size:1.5em;
   color:white;
@@ -253,10 +280,22 @@ margin:0 auto;
 }
 
 
-
 .onlymobile {
   display:none;
 }
+
+@media only screen and (max-width: 1600px) {
+  .laurels .left {
+    flex-direction: column;
+  }
+  .laurels .right {
+    flex-direction: column-reverse;
+}
+.laurels {
+  padding-top:5vh;
+}
+}
+
 
 @media only screen and (max-width: 900px) {
     .onlydesktop {
@@ -264,7 +303,22 @@ margin:0 auto;
     }
     .onlymobile {
       display:block;
-    }
   }
-
-
+  .laurelsmob {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    padding: 0;
+    margin: 10vh 0;
+}
+.laurels .left, .laurels .right {
+  gap: 50px;
+}
+.trailer, #synopsis, #shop {
+  margin: 10vh auto;
+  }
+  #synopsis {
+    font-size:1em;
+  }
+}
