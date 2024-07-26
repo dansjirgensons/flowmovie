@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Toroka Wide';
+    src: url('Toroka-WideLight.woff2') format('woff2'),
+        url('Toroka-WideLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Toroka Wide';
+    src: url('Toroka-WideRegular.woff2') format('woff2'),
+        url('Toroka-WideRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

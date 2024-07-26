@@ -1,4 +1,24 @@
-html, body {margin:0;padding:0; font-family:Toroka;}
+@font-face {
+  font-family: 'Toroka Wide';
+  src: url('fonts/Toroka-WideLight.woff2') format('woff2'),
+      url('fonts/Toroka-WideLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Toroka Wide';
+  src: url('fonts/Toroka-WideRegular.woff2') format('woff2'),
+      url('fonts/Toroka-WideRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+html, body {margin:0;padding:0; font-family:Toroka Wide;}
 body { background:black;}
 .lightfont {
 font-weight:200;
@@ -10,12 +30,12 @@ font-weight:200;
   left:0;
   transform: translate(calc(50vw - 50%));
   z-index:100;
-  animation: logoscale 20s ease-in-out infinite;
+  /* animation: logoscale 20s ease-in-out infinite; */
 }
 .logo img {
 width:100%;
 }
-
+/* 
 @keyframes logoscale {
   0% {
     transform: translate(calc(50vw - 50%)) scale(1);
@@ -26,7 +46,7 @@ width:100%;
   100% {
     transform: translate(calc(50vw - 50%)) scale(1);
   }
-}
+} */
 
 #top-anim {
 width:100vw;
@@ -191,4 +211,32 @@ margin:0 auto;
 
 #shop {
   margin:25vh auto;
+}
+
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+  opacity:1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.loader-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader-content svg {
+  width:50vh;
+  max-width:30%;
 }
