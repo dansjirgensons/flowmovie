@@ -18,7 +18,7 @@
 
 
 
-html, body {margin:0;padding:0; font-family:Toroka Wide;}
+html, body {margin:0;padding:0; font-family:Toroka Wide;overscroll-behavior-y: none;}
 body { background:black;}
 .lightfont {
 font-weight:200;
