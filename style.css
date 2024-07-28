@@ -33,7 +33,7 @@ font-weight:200;
 .logo {
   position: absolute;
   width: 20%;
-  top: 4vh;
+  top: 3vh;
   left:0;
   transform: translate(calc(50vw - 50%));
   z-index:100;
@@ -57,7 +57,7 @@ width:100%;
 
 .laurels {
   position: absolute;
-  padding-top:8vh;
+  padding-top:7vh;
   padding-left:4vh;
   padding-right:4vh;
   display: flex;
