@@ -25,56 +25,73 @@
     };
 
 
-function updateElementStyles() {
-    // Select all images with the classes "cat" and "city"
-    const images = document.querySelectorAll('.cat, .city'); 
-    const logo = document.querySelector('.logo');
-
-    // Define transition ranges for image bottom values
-    const minWidth = 600; // Minimum width (px) for transition
-    const maxWidth = 1710; // Maximum width (px) for transition
-
-    // Get the current window width
-    const currentWidth = window.innerWidth;
-
-    // Ensure currentWidth is within the minWidth and maxWidth range
-    const clampedWidth = Math.max(minWidth, Math.min(maxWidth, currentWidth));
-
-    images.forEach(img => {
-        const isCat = img.classList.contains('cat');
-        const isCity = img.classList.contains('city');
-
-        // Define maxBottom and minBottom for each class
-        let maxBottom;
-        let minBottom;
-
-        if (isCat) {
-            maxBottom = -55; // Maximum bottom value (in vh) for .cat
-            minBottom = 0;   // Minimum bottom value (in vh) for .cat
-        } else if (isCity) {
-            maxBottom = -50; // Maximum bottom value (in vh) for .city
-            minBottom = 8;  // Minimum bottom value (in vh) for .city
+    function updateElementStyles() {
+        // Select all images with the classes "cat" and "city"
+        const images = document.querySelectorAll('.cat, .city'); 
+        const logo = document.querySelector('.logo');
+    
+        // Define transition ranges for image bottom values
+        const minWidth = 600;  // Minimum width (px) for transition
+        const midWidth = 1300; // Midpoint at 1300px
+        const maxWidth = 1710; // Maximum width (px) for transition
+    
+        // Get the current window width
+        const currentWidth = window.innerWidth;
+    
+        // Ensure currentWidth is within the minWidth and maxWidth range
+        const clampedWidth = Math.max(minWidth, Math.min(maxWidth, currentWidth));
+    
+        images.forEach(img => {
+            const isCat = img.classList.contains('cat');
+            const isCity = img.classList.contains('city');
+    
+            let maxBottom;
+            let minBottom;
+            let bottomValue;
+    
+            if (isCat) {
+                if (clampedWidth <= midWidth) {
+                    // Transition from 600 to 1300px
+                    maxBottom = -55; // Bottom value at 1300px
+                    minBottom = 0;   // Bottom value at 600px
+                    bottomValue = ((clampedWidth - minWidth) / (midWidth - minWidth)) * (maxBottom - minBottom) + minBottom;
+                } else {
+                    // Transition from 1300 to 1710px
+                    maxBottom = -55; // Bottom value at 1710px
+                    minBottom = -55; // Bottom value at 1300px
+                    bottomValue = ((clampedWidth - midWidth) / (maxWidth - midWidth)) * (maxBottom - minBottom) + minBottom;
+                }
+            } else if (isCity) {
+                // Transition from 600 to 1710px
+                maxBottom = -50; // Maximum bottom value (in vh) for .city
+                minBottom = 8;   // Minimum bottom value (in vh) for .city
+                bottomValue = ((clampedWidth - minWidth) / (maxWidth - minWidth)) * (maxBottom - minBottom) + minBottom;
+            }
+    
+            // Set the new bottom value in vh
+            img.style.bottom = bottomValue + 'vh';
+        });
+    
+        if (logo) {
+            let logoWidth;
+            if (clampedWidth <= midWidth) {
+                // Transition from 600 to 1300px
+                const logoMinWidth = 70; // Width at 600px
+                const logoMidWidth = 25; // Width at 1300px
+                logoWidth = ((clampedWidth - minWidth) / (midWidth - minWidth)) * (logoMidWidth - logoMinWidth) + logoMinWidth;
+            } else {
+                // Transition from 1300 to 1710px
+                const logoMidWidth = 25; // Width at 1300px
+                const logoMaxWidth = 20; // Width at 1710px
+                logoWidth = ((clampedWidth - midWidth) / (maxWidth - midWidth)) * (logoMaxWidth - logoMidWidth) + logoMidWidth;
+            }
+    
+            // Set the new width value in percentage
+            logo.style.width = logoWidth + '%';
         }
-
-        // Calculate the new bottom value based on the clamped window width
-        const bottomValue = ((clampedWidth - minWidth) / (maxWidth - minWidth)) * (maxBottom - minBottom) + minBottom;
-
-        // Set the new bottom value in vh
-        img.style.bottom = bottomValue + 'vh';
-    });
-
-    if (logo) {
-        const logoMinWidth = 70; // Minimum width (percentage) for the logo
-        const logoMaxWidth = 20; // Maximum width (percentage) for the logo
-
-        // Calculate the new width value based on the clamped window width
-        const logoWidth = ((clampedWidth - minWidth) / (maxWidth - minWidth)) * (logoMaxWidth - logoMinWidth) + logoMinWidth;
-
-        // Set the new width value in percentage
-        logo.style.width = logoWidth + '%';
     }
-}
-
-// Add event listeners for initial load and window resize
-window.addEventListener('load', updateElementStyles);
-window.addEventListener('resize', updateElementStyles);
+    
+    // Add event listeners for initial load and window resize
+    window.addEventListener('load', updateElementStyles);
+    window.addEventListener('resize', updateElementStyles);
+    
