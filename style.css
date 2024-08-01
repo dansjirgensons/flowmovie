@@ -249,7 +249,7 @@ margin:0 auto;
 }
 
 #shop {
-  margin:25vh auto;
+  margin: 25vh 0 10vh 0;
   max-width:1800px;
 }
 
@@ -291,7 +291,7 @@ margin:0 auto;
 
 .socials {
   max-width:1200px;
-  margin:25vh auto;
+  margin:5vh auto;
   display:flex;
   align-items:flex-end;
 }
