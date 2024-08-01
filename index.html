@@ -7,6 +7,17 @@
     <title>FLOW – Dream Well Studio</title>
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
     <link rel="icon" type="image/png" href="favicon/favicon.png">
+    
+    <style>
+      @font-face {
+  font-family: 'Toroka Wide';
+  src: url('fonts/Toroka-WideRegular.woff2') format('woff2'),
+      url('fonts/Toroka-WideRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+    </style>
   </head>
   
 <body>
@@ -91,9 +102,9 @@
 
 <div class="stills">
 <!-- <img src="stills/F_01-min.jpg" /> -->
-<img src="stills/F_03-min.jpg" />
-<img src="stills/F_02-min.jpg" />
 <img src="stills/F_04-min.jpg" />
+<img src="stills/F_02-min.jpg" />
+<img src="stills/F_03-min.jpg" />
 <img src="stills/F_05-min.jpg" />
 <!-- <img src="stills/F_06-min.jpg" /> -->
 </div>
@@ -136,10 +147,10 @@
     "styles": {
       "product": {
         "@media (min-width: 0px)": {
-          "max-width": "calc(50% - 40px)",
+          "max-width": "calc(800px - 40px)",
           "margin-left": "40px",
           "margin-bottom": "50px",
-          "width": "calc(50% - 40px)",
+          "width": "calc(100% - 40px)",
           "font-family": "'Toroka Wide', sans-serif"
         },
         "img": {
@@ -414,46 +425,21 @@
 
 </script>
 
+<div class="socials">
+  <a href="https://facebook.com/flowmovie2024" class="dog"><img src="characters/Dog.png" /><span>Facebook</span></a>
+  <a href="https://instagram.com/flowmovie2024" class="bird"><img src="characters/Bird.png" /><span>Instagram</span></a>
+  <a href="https://imdb.com/title/tt4772188" class="lemur"><img src="characters/Lemur.png" /><span>IMDB</span></a>
+</div>
+
 <div class="billingblock">
-  <img src="billingblock.svg" />
+  <img class="onlydesktop" src="billingblock.svg" />
+    <img class="onlymobile" src="billingblock-logos.svg" />
+  </div>
 </div>
 
 
 <script src="script.js"></script>
 <script src="vimeo.js"></script>
-<script>
-  // Wait for the iframe to load
-  const iframe = document.getElementById('shopify-iframe');
 
-  iframe.onload = function() {
-      const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-
-      // Create a new style element
-      const style = document.createElement('style');
-      style.textContent = `
-          @font-face {
-              font-family: 'Toroka Wide';
-              src: url('fonts/Toroka-WideLight.woff2') format('woff2'),
-                   url('fonts/Toroka-WideLight.woff') format('woff');
-              font-weight: 300;
-              font-style: normal;
-              font-display: swap;
-          }
-
-          /* Apply the custom font to the iframe's body or specific elements */
-          body {
-              font-family: 'Toroka Wide', sans-serif;
-          }
-
-          /* Add more specific styles if needed */
-          h1, p {
-              font-family: 'Toroka Wide', sans-serif;
-          }
-      `;
-
-      // Append the style element to the iframe's head
-      iframeDocument.head.appendChild(style);
-  };
-</script>
 </body>
 </html>

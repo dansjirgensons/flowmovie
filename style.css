@@ -25,7 +25,7 @@
 	box-sizing: border-box !important;
 }
 
-html, body {margin:0;padding:0; font-family:Toroka Wide;overscroll-behavior-y: none;}
+html, body {margin:0;padding:0; font-family:Toroka Wide;overscroll-behavior-y: none; user-select:none;}
 body { background:black;}
 .lightfont {
 font-weight:200;
@@ -249,7 +249,7 @@ margin:0 auto;
 
 #shop {
   margin:25vh auto;
-  max-width:1200px;
+  max-width:1800px;
 }
 
 
@@ -287,6 +287,40 @@ margin:0 auto;
 .stills img {
   width:50%;
 }
+
+.socials {
+  max-width:1200px;
+  margin:25vh auto;
+  display:flex;
+  align-items:flex-end;
+}
+.socials a {
+  display: flex;
+  flex-direction: column;
+  color:white;
+  text-decoration: none;
+  align-items:center;
+  cursor:pointer;
+}
+.socials a span {
+  margin-top:20px;
+}
+
+.socials .dog img {
+  width:75%;
+}
+.socials .bird img {
+  width:140%;
+}
+.socials .lemur img {
+  width:60%;
+}
+.socials a:hover {
+      /* filter: drop-shadow(0px 0px 5px white); */
+      filter: brightness(1.2);
+}
+
+
 
 
 .onlymobile {
@@ -333,4 +367,22 @@ margin:0 auto;
   .stills img {
     width:100%;
   }
+  .socials {
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content:center;
+  }
+  .socials a {
+    width:50%;
+  }
+  .socials .lemur {
+    margin-top:5vh;
+  }
+  .billingblock img {
+    margin:10%;
+  }
+}
+
+img {
+  pointer-events:none !important;
 }
