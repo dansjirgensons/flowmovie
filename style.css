@@ -200,6 +200,9 @@ pointer-events:none;
     color: rgba(255, 255, 255, 1); /* Brighten the play button */
 }
 
+.right-pointing-triangle::after {
+  content: "\25B6 \FE0E";
+}
 
 /* Popup styles */
 .popup {
