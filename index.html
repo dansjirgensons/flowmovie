@@ -89,7 +89,14 @@
 
 <div id="synopsis">Cat is a solitary animal, but as its home is devastated by a great flood, he finds refuge on a boat populated by various species, and will have to team up with them despite their differences.</div>
 
-
+<div class="stills">
+<!-- <img src="stills/F_01-min.jpg" /> -->
+<img src="stills/F_03-min.jpg" />
+<img src="stills/F_02-min.jpg" />
+<img src="stills/F_04-min.jpg" />
+<img src="stills/F_05-min.jpg" />
+<!-- <img src="stills/F_06-min.jpg" /> -->
+</div>
 
 <div id="shop">
   <div id='collection-component-1721988942943'></div>
@@ -129,10 +136,11 @@
     "styles": {
       "product": {
         "@media (min-width: 0px)": {
-          "max-width": "calc(80% - 40px)",
+          "max-width": "calc(50% - 40px)",
           "margin-left": "40px",
           "margin-bottom": "50px",
-          "width": "calc(80% - 40px)"
+          "width": "calc(50% - 40px)",
+          "font-family": "'Toroka Wide', sans-serif"
         },
         "img": {
           "height": "calc(100% - 15px)",
@@ -401,6 +409,8 @@
   }
 })();
 /*]]>*/
+
+
 </script>
 
 <div class="billingblock">
@@ -410,6 +420,39 @@
 
 <script src="script.js"></script>
 <script src="vimeo.js"></script>
+<script>
+  // Wait for the iframe to load
+  const iframe = document.getElementById('shopify-iframe');
 
+  iframe.onload = function() {
+      const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+      // Create a new style element
+      const style = document.createElement('style');
+      style.textContent = `
+          @font-face {
+              font-family: 'Toroka Wide';
+              src: url('fonts/Toroka-WideLight.woff2') format('woff2'),
+                   url('fonts/Toroka-WideLight.woff') format('woff');
+              font-weight: 300;
+              font-style: normal;
+              font-display: swap;
+          }
+
+          /* Apply the custom font to the iframe's body or specific elements */
+          body {
+              font-family: 'Toroka Wide', sans-serif;
+          }
+
+          /* Add more specific styles if needed */
+          h1, p {
+              font-family: 'Toroka Wide', sans-serif;
+          }
+      `;
+
+      // Append the style element to the iframe's head
+      iframeDocument.head.appendChild(style);
+  };
+</script>
 </body>
 </html>

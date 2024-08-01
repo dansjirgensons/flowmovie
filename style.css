@@ -279,6 +279,14 @@ margin:0 auto;
   max-width:30%;
 }
 
+.stills {
+  display:flex;
+  flex-flow:wrap;
+}
+.stills img {
+  width:50%;
+}
+
 
 .onlymobile {
   display:none;
@@ -320,5 +328,8 @@ margin:0 auto;
   }
   #synopsis {
     font-size:1em;
+  }
+  .stills img {
+    width:100%;
   }
 }
