@@ -167,6 +167,7 @@ position: absolute;
 .billingblock {
 max-width:1800px;
 margin:0 auto;
+pointer-events:none;
 }
 
 
@@ -240,7 +241,7 @@ margin:0 auto;
 }
 
 #synopsis {
-  max-width:49ch;
+  max-width:48ch;
   padding:0 5%;
   font-size:1.5em;
   color:white;
@@ -291,7 +292,7 @@ margin:0 auto;
 
 .socials {
   max-width:1200px;
-  margin:5vh auto;
+  margin:3vh auto;
   display:flex;
   align-items:flex-end;
 }
@@ -364,6 +365,7 @@ margin:0 auto;
   }
   #synopsis {
     font-size:1em;
+      max-width:38ch;
   }
   .stills img {
     width:100%;
