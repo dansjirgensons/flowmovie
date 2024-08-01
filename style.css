@@ -253,7 +253,7 @@ pointer-events:none;
 }
 
 #shop {
-  margin: 25vh 0 10vh 0;
+  margin: 25vh auto 10vh auto;
   max-width:1800px;
 }
 
