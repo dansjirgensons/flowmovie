@@ -94,5 +94,3 @@
         // Add event listeners for initial load and window resize
         window.addEventListener('load', updateElementStyles);
         window.addEventListener('resize', updateElementStyles);
-        
-        
