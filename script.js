@@ -65,7 +65,7 @@
                     }
                 } else if (isCity) {
                     // Transition from 600px to 1710px
-                    maxBottom = -50; // Maximum bottom value (in vh) for .city
+                    maxBottom = -30; // Maximum bottom value (in vh) for .city
                     minBottom = 8;   // Minimum bottom value (in vh) for .city
                     bottomValue = ((clampedWidth - minWidth) / (maxWidth - minWidth)) * (maxBottom - minBottom) + minBottom;
                     img.style.bottom = bottomValue + 'vh';
