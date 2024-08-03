@@ -25,7 +25,7 @@
 	box-sizing: border-box !important;
 }
 
-html, body {margin:0;padding:0; font-family:Toroka Wide;overscroll-behavior-y: none; user-select:none; -webkit-user-select:none;
+html, body {margin:0;padding:0; font-family:Toroka Wide;overscroll-behavior: none; user-select:none; -webkit-user-select:none;
   -webkit-font-smoothing: antialiased; font-smoothing:antialised;}
 body { background:black;}
 .lightfont, .billingblock span {
