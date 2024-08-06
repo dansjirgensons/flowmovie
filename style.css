@@ -170,6 +170,61 @@ margin:0 auto;
 pointer-events:none;
 }
 
+a.ticketsbutton {
+  color: white;
+  text-decoration: none;
+  margin-top: 20vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 300px;
+}
+
+div.ticketsbutton {
+  text-align: center;
+  padding: 25px 0;
+  background: white;
+  color: black;
+  display: block;
+  position: relative;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  overflow: hidden; /* Ensure child elements don't overflow */
+  mix-blend-mode: screen;
+}
+
+/* Styling for the cut corners */
+div.ticketsbutton:before,
+div.ticketsbutton:after {
+  content: "";
+  width: 20px; /* Adjust width for corner size */
+  height: 20px; /* Adjust height for corner size */
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+div.ticketsbutton:before {
+  left: -10px; /* Position left corner */
+  border-right: none; /* Hide the border on the side facing the ticket */
+}
+
+div.ticketsbutton:after {
+  right: -10px; /* Position right corner */
+  border-left: none; /* Hide the border on the side facing the ticket */
+}
+
+div.ticketsbutton:hover {
+  background-color: #ccc;
+}
+
+.ticketsbutton span {
+  display: block;
+  font-size: 0.7em;
+  margin-top: 0.1em;
+}
 
 
 
@@ -395,6 +450,11 @@ pointer-events:none;
     text-align:center;
     font-size:0.8em;
   }
+  a.ticketsbutton {
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  width:70%;
+}
 }
 
 img {
