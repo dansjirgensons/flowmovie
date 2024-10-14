@@ -389,8 +389,11 @@ div.ticketsbutton:hover {
   padding:0 5%;
   margin-bottom:25vh;
 }
+.wallpapers a {
+  width:15%;
+}
 .wallpapers img {
-  width: 15%;
+  width: 100%;
 max-width: 100%;
 height: auto;
 pointer-events: all !important;
@@ -480,7 +483,7 @@ p.wallp {
   margin-bottom: 20vh;
   width:70%;
 }
-.wallpapers img {
+.wallpapers a {
   width:30%;
 }
 .wallpapers {
