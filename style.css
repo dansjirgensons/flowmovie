@@ -308,7 +308,7 @@ div.ticketsbutton:hover {
 }
 
 #shop {
-  margin: 25vh auto 10vh auto;
+  margin: 25vh auto 25vh auto;
   max-width:1800px;
 }
 
@@ -379,6 +379,31 @@ div.ticketsbutton:hover {
       /* filter: drop-shadow(0px 0px 5px white); */
       filter: brightness(1.2);
 }
+
+.wallpapers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  padding:0 5%;
+  margin-bottom:25vh;
+}
+.wallpapers img {
+  width: 15%;
+max-width: 100%;
+height: auto;
+pointer-events: all !important;
+}
+p.wallp {
+  padding: 0 5%;
+  font-size: 1.5em;
+  color: white;
+  text-align:center;
+}
+
+
+
 
 
 
@@ -454,6 +479,12 @@ div.ticketsbutton:hover {
   margin-top: 20vh;
   margin-bottom: 20vh;
   width:70%;
+}
+.wallpapers img {
+  width:30%;
+}
+.wallpapers {
+  margin-bottom:10vh;
 }
 }
 
