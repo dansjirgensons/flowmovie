@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Toroka Wide';
   src: url('fonts/Toroka-WideLight.woff2') format('woff2'),
-      url('fonts/Toroka-WideLight.woff') format('woff');
+    url('fonts/Toroka-WideLight.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -10,38 +10,52 @@
 @font-face {
   font-family: 'Toroka Wide';
   src: url('fonts/Toroka-WideRegular.woff2') format('woff2'),
-      url('fonts/Toroka-WideRegular.woff') format('woff');
+    url('fonts/Toroka-WideRegular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-*, *:before, *:after {
-	margin: 0;
-	padding: 0;
-	-webkit-box-sizing: border-box !important;
-	-moz-box-sizing: border-box !important;
-	-ms-box-sizing: border-box !important;
-	box-sizing: border-box !important;
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
 }
 
-html, body {margin:0;padding:0; font-family:Toroka Wide;overscroll-behavior: none; user-select:none; -webkit-user-select:none;
-  -webkit-font-smoothing: antialiased; font-smoothing:antialised;}
-body { background:black;}
-.lightfont, .billingblock span {
-font-weight:200;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Toroka Wide;
+  overscroll-behavior: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialised;
+}
+body {
+  background: black;
+}
+.lightfont,
+.billingblock span {
+  font-weight: 200;
 }
 .logo {
   position: absolute;
   width: 20%;
   top: 3vh;
-  left:0;
+  left: 0;
   transform: translate(calc(50vw - 50%));
-  z-index:100;
+  z-index: 100;
   /* animation: logoscale 20s ease-in-out infinite; */
 }
 .logo img {
-width:100%;
+  width: 100%;
 }
 /* 
 @keyframes logoscale {
@@ -58,16 +72,17 @@ width:100%;
 
 .laurels {
   position: absolute;
-  padding-top:7vh;
-  padding-left:4vh;
-  padding-right:4vh;
+  padding-top: 7vh;
+  padding-left: 4vh;
+  padding-right: 4vh;
   display: flex;
-  width:100%;
-justify-content: space-between;
+  width: 100%;
+  justify-content: space-between;
   flex-direction: row;
 }
-.laurels .left, .laurels .right {
-  display:flex;
+.laurels .left,
+.laurels .right {
+  display: flex;
   gap: 2vw;
   /* max-width: 700px; */
 }
@@ -77,48 +92,47 @@ justify-content: space-between;
 }
 
 #top-anim {
-width:100vw;
-height:100vh;
-position:relative;
-/* overflow:hidden; */
-z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  /* overflow:hidden; */
+  z-index: -1;
 }
 #top-anim img {
-width: 100vw;
-position:absolute;
+  width: 100vw;
+  position: absolute;
 }
 .sky {
-object-fit: cover;
-width:100%;
-height:100%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .city {
-/* bottom: -50vh; */
+  /* bottom: -50vh; */
   left: 0px;
   /* transition: bottom 0.2s ease-in-out; */
-  
 }
 .cat {
-left: 0px;
-right:0px;
-bottom: 0px;
-animation: moveUpAndDown 5s ease-in-out infinite;
-bottom: -55vh;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  animation: moveUpAndDown 5s ease-in-out infinite;
+  bottom: -55vh;
   /* transition: bottom 0.2s ease-in-out; */
 }
 
-      /* Keyframes for animation */
-      @keyframes moveUpAndDown {
-          0% {
-              transform: translateY(0);
-          }
-          50% {
-              transform: translateY(1vw);
-          }
-          100% {
-              transform: translateY(0);
-          }
-      }
+/* Keyframes for animation */
+@keyframes moveUpAndDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 .citynormal {
   animation: cityfade 30s ease-in-out infinite;
@@ -126,48 +140,52 @@ bottom: -55vh;
 
 @keyframes cityfade {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   50% {
-    opacity:1;
+    opacity: 1;
   }
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
-      .gradient-overlay {
+.gradient-overlay {
   position: absolute; /* Position overlay absolutely */
   top: 0; /* Cover entire container */
   left: 0;
   width: 100%;
   height: 50%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 20%)); /* Gradient from transparent to black */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 20%)
+  ); /* Gradient from transparent to black */
   pointer-events: none; /* Allow interactions to pass through */
   mix-blend-mode: multiply; /* Apply multiply blend mode */
 }
 .director {
-position: absolute;
-  color: white;
-  width: 100%;
-  text-align: center;
-  bottom: 3vh;
-  font-size:1.5em;
-  z-index:1;
-}
-.directormobile {
-  bottom:auto;
-  margin-top:4vh;
   position: absolute;
   color: white;
   width: 100%;
   text-align: center;
-  font-size:1em;
-  z-index:1;
+  bottom: 3vh;
+  font-size: 1.5em;
+  z-index: 1;
+}
+.directormobile {
+  bottom: auto;
+  margin-top: 4vh;
+  position: absolute;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  z-index: 1;
 }
 .billingblock {
-max-width:1800px;
-margin:0 auto;
-pointer-events:none;
+  max-width: 1800px;
+  margin: 0 auto;
+  pointer-events: none;
 }
 
 a.ticketsbutton {
@@ -196,7 +214,7 @@ div.ticketsbutton {
 /* Styling for the cut corners */
 div.ticketsbutton:before,
 div.ticketsbutton:after {
-  content: "";
+  content: '';
   width: 20px; /* Adjust width for corner size */
   height: 20px; /* Adjust height for corner size */
   background: black;
@@ -226,13 +244,11 @@ div.ticketsbutton:hover {
   margin-top: 0.1em;
 }
 
-
-
 .trailer {
   margin: 25vh auto;
-  width:90%;
-  max-width:1200px;
-  display:flex;
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -248,15 +264,14 @@ div.ticketsbutton:hover {
   position: absolute;
   font-size: 64px;
   color: rgba(255, 255, 255, 0.8);
-
 }
 .trailer:hover .play-button,
 .play-button:hover {
-    color: rgba(255, 255, 255, 1); /* Brighten the play button */
+  color: rgba(255, 255, 255, 1); /* Brighten the play button */
 }
 
 .right-pointing-triangle::after {
-  content: "\25B6 \FE0E";
+  content: '\25B6 \FE0E';
 }
 
 /* Popup styles */
@@ -270,7 +285,7 @@ div.ticketsbutton:hover {
   background: rgba(0, 0, 0, 0.9);
   justify-content: center;
   align-items: center;
-  z-index: 1000; 
+  z-index: 1000;
 }
 
 .popup-content {
@@ -295,23 +310,22 @@ div.ticketsbutton:hover {
   font-size: 32px;
   color: white;
   cursor: pointer;
-  z-index: 1001; 
+  z-index: 1001;
 }
 
 #synopsis {
-  max-width:48ch;
-  padding:0 5%;
-  font-size:1.5em;
-  color:white;
-  margin:25vh auto;
-  text-align:center;
+  max-width: 48ch;
+  padding: 0 5%;
+  font-size: 1.5em;
+  color: white;
+  margin: 25vh auto;
+  text-align: center;
 }
 
-#shop {
+/* #shop {
   margin: 25vh auto 25vh auto;
-  max-width:1800px;
-}
-
+  max-width: 1800px;
+} */
 
 #loader {
   position: fixed;
@@ -322,8 +336,8 @@ div.ticketsbutton:hover {
   background: black;
   justify-content: center;
   align-items: center;
-  z-index: 1000; 
-  opacity:1;
+  z-index: 1000;
+  opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -336,48 +350,48 @@ div.ticketsbutton:hover {
   align-items: center;
 }
 .loader-content svg {
-  width:50vh;
-  max-width:30%;
+  width: 50vh;
+  max-width: 30%;
 }
 
 .stills {
-  display:flex;
-  flex-flow:wrap;
+  display: flex;
+  flex-flow: wrap;
 }
 .stills img {
-  width:50%;
+  width: 50%;
 }
 
 .socials {
-  max-width:1200px;
-  margin:3vh auto;
-  display:flex;
-  align-items:flex-end;
+  max-width: 1200px;
+  margin: 3vh auto;
+  display: flex;
+  align-items: flex-end;
 }
 .socials a {
   display: flex;
   flex-direction: column;
-  color:white;
+  color: white;
   text-decoration: none;
-  align-items:center;
-  cursor:pointer;
+  align-items: center;
+  cursor: pointer;
 }
 .socials a span {
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .socials .dog img {
-  width:75%;
+  width: 75%;
 }
 .socials .bird img {
-  width:140%;
+  width: 140%;
 }
 .socials .lemur img {
-  width:60%;
+  width: 60%;
 }
 .socials a:hover {
-      /* filter: drop-shadow(0px 0px 5px white); */
-      filter: brightness(1.2);
+  /* filter: drop-shadow(0px 0px 5px white); */
+  filter: brightness(1.2);
 }
 
 .wallpapers {
@@ -386,33 +400,47 @@ div.ticketsbutton:hover {
   justify-content: center;
   width: 100%;
   gap: 10px;
-  padding:0 5%;
-  margin-bottom:25vh;
+  padding: 0 5%;
+  margin-bottom: 25vh;
 }
 .wallpapers a {
-  width:15%;
+  width: 15%;
 }
 .wallpapers img {
   width: 100%;
-max-width: 100%;
-height: auto;
-pointer-events: all !important;
+  max-width: 100%;
+  height: auto;
+  pointer-events: all !important;
 }
 p.wallp {
   padding: 0 5%;
   font-size: 1.5em;
   color: white;
-  text-align:center;
+  text-align: center;
+  margin-top: 25vh;
+}
+.wallp a {
+  color: white;
+  text-decoration: none;
 }
 
+#shop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  padding: 0 5%;
+  margin-bottom: 25vh;
+  margin-top: 10vh;
+}
 
-
-
-
-
+#shop img {
+  height: 200px;
+}
 
 .onlymobile {
-  display:none;
+  display: none;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -421,19 +449,18 @@ p.wallp {
   }
   .laurels .right {
     flex-direction: column-reverse;
+  }
+  .laurels {
+    padding-top: 5vh;
+  }
 }
-.laurels {
-  padding-top:5vh;
-}
-}
-
 
 @media only screen and (max-width: 900px) {
-    .onlydesktop {
-      display:none;
-    }
-    .onlymobile {
-      display:block;
+  .onlydesktop {
+    display: none;
+  }
+  .onlymobile {
+    display: block;
   }
   .laurelsmob {
     position: relative;
@@ -442,55 +469,58 @@ p.wallp {
     gap: 5%;
     padding: 0;
     margin: 10vh 0;
-}
-.laurels .left, .laurels .right {
-  gap: 50px;
-}
-.trailer, #synopsis, #shop {
-  margin: 10vh auto;
+  }
+  .laurels .left,
+  .laurels .right {
+    gap: 50px;
+  }
+  .trailer,
+  #synopsis,
+  #shop {
+    margin: 10vh auto;
   }
   #synopsis {
-    font-size:1em;
-      max-width:38ch;
+    font-size: 1em;
+    max-width: 38ch;
   }
   .stills img {
-    width:100%;
+    width: 100%;
   }
   .socials {
     flex-direction: column;
     flex-flow: wrap;
-    justify-content:center;
+    justify-content: center;
     overflow-x: hidden;
-    margin:10vh auto;
+    margin: 10vh auto;
   }
   .socials a {
-    width:50%;
+    width: 50%;
   }
   .socials .lemur {
-    margin-top:5vh;
+    margin-top: 5vh;
   }
   .billingblock img {
-    margin:10%;
+    margin: 10%;
   }
   .billingblock div {
-    color:white;
-    padding:0 5%;
-    text-align:center;
-    font-size:0.8em;
+    color: white;
+    padding: 0 5%;
+    text-align: center;
+    font-size: 0.8em;
   }
   a.ticketsbutton {
-  margin-top: 20vh;
-  margin-bottom: 20vh;
-  width:70%;
-}
-.wallpapers a {
-  width:30%;
-}
-.wallpapers {
-  margin-bottom:10vh;
-}
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    width: 70%;
+  }
+  .wallpapers a {
+    width: 30%;
+  }
+  .wallpapers {
+    margin-bottom: 10vh;
+  }
 }
 
 img {
-  pointer-events:none !important;
+  pointer-events: none !important;
 }
