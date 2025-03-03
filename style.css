@@ -519,6 +519,9 @@ p.wallp {
   .wallpapers {
     margin-bottom: 10vh;
   }
+  #shop img {
+    height: 120px;
+  }
 }
 
 img {
