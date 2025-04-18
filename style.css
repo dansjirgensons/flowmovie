@@ -443,6 +443,17 @@ p.wallp {
   display: none;
 }
 
+#manilla {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 5%;
+  margin-bottom: 25vh;
+}
+#manilla img {
+  width: 100%;
+}
+
 @media only screen and (max-width: 1600px) {
   .laurels .left {
     flex-direction: column;
